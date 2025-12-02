@@ -3,12 +3,12 @@
 
 AppEngine::AppEngine(QGuiApplication &app, QObject *parent) : mApp(&app), QObject(parent)
 {
-    mViewer = new QQuickView;
-    mViewer->setSource(QUrl::fromLocalFile(":/main.qml"));
-    mViewer->rootContext()->setContextProperty("myEngine", this);
-
     AppSetting* mSetting = new AppSetting;
+    mViewer = new QQuickView;
     mViewer->rootContext()->setContextProperty("mySetting", mSetting);
+    mViewer->rootContext()->setContextProperty("myEngine", this);
+    mViewer->setSource(QUrl::fromLocalFile(":/main.qml"));
+
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
     if(!dbus.isConnected())
@@ -36,6 +36,7 @@ AppEngine::AppEngine(QGuiApplication &app, QObject *parent) : mApp(&app), QObjec
 AppEngine::~AppEngine()
 {
     LOG << "decontructor";
+    mInterface->requestShow(AppHome_Enum::APP_HOME);
     if(mViewer)
     {
         delete mViewer;

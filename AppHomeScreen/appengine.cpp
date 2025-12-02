@@ -24,14 +24,16 @@ AppEngine::AppEngine(QGuiApplication &app, QObject *parent) : mApp(&app), QObjec
     {
         LOG << "cannot registerObject" << PATH_NAME_HOME;
     }
-
+    LOG << "registering ..." ;
     mAptor = new AppEngineAdaptor(this);
     mInterface = new local::AppMain(QString(SERVICE_NAME_MAIN), QString(PATH_NAME_MAIN), dbus, this);
     mInterface->registrationAppID(APP_HOME, "AppHomeScreen", SERVICE_NAME_HOME, PATH_NAME_HOME);
+    LOG << "register Done" ;
 }
 
 AppEngine::~AppEngine()
 {
+    LOG << "decontructor";
     if(mViewer)
     {
         delete mViewer;

@@ -57,11 +57,11 @@ void AppEngine::deregistrationAppID(int appid, const QString &appname)
     LOG << "appid: " << appid;
     if(!mMappApps.contains(appid))
     {
-        mMappApps.remove(appid);
+        LOG << "Map does not include the appID: " << appid;
     }
     else
     {
-        LOG << "Map does not include the appID: " << appid;
+        mMappApps.remove(appid);
     }
 }
 

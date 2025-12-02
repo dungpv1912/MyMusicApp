@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>StatusBar.qml</file>
+        <file>main.qml</file>
+        <file>MainItem.qml</file>
+        <file>img/playlistIcon.png</file>
+        <file>img/EngIcon.png</file>
+        <file>img/gallery.png</file>
+        <file>img/minusIcon.png</file>
+        <file>img/music-player.png</file>
+        <file>utils.js</file>
+        <file>img/settings.png</file>
+        <file>img/back.png</file>
+        <file>img/home.png</file>
+    </qresource>
+</RCC>

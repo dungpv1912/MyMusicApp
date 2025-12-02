@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>StatusBar.qml</file>
+        <file>MainItem.qml</file>
+        <file>utils.js</file>
+        <file>img/back.png</file>
+        <file>img/backIcon.png</file>
+        <file>img/backIcon_01.png</file>
+        <file>img/EngIcon.png</file>
+        <file>img/gallery.png</file>
+        <file>img/home.png</file>
+        <file>img/minusIcon.png</file>
+        <file>img/music-player.png</file>
+        <file>img/nextIcon.png</file>
+        <file>img/nextIcon_01.png</file>
+        <file>img/pauseIcon.png</file>
+        <file>img/playIcon.png</file>
+        <file>img/playlistIcon.png</file>
+        <file>img/plusIcon.png</file>
+        <file>img/settings.png</file>
+        <file>settingVolume.qml</file>
+        <file>settingLanguage.qml</file>
+        <file>ChangeVolBttn.qml</file>
+    </qresource>
+</RCC>

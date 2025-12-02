@@ -1,0 +1,16 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="local.AppEngine">
+        <method name="showWindow">
+            <arg type="i" direction="out"/>
+            <arg name="appID" type="i" direction="in"/>
+        </method>
+        <method name="hideWindow">
+            <arg type="i" direction="out"/>
+            <arg name="appID" type="i" direction="in"/>
+        </method>
+        <method name="requestShow">
+            <arg name="appID" type="i" direction="in"/>
+        </method>
+  </interface>
+</node>

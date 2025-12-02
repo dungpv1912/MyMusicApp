@@ -1,23 +1,11 @@
-var AppID = {
-    APP_MAIN: 0,
-    APP_HOME: 1,
-    APP_MEDIA: 2,
-    APP_SETUP: 3,
-    APP_GALLERY: 4
-};
-
-function getIndex(name) {
-    if (name === "Setting") {
-        return AppID.APP_SETUP;
-    } else if (name === "Gallery") {
-        return AppID.APP_GALLERY;
-    } else if (name === "Music") {
-        return AppID.APP_MEDIA;
-    }
-
-    return AppID.APP_MAIN; // optional: handle unknown names
+function getIndex(name){
+    if (name === "Setting")
+        return 3
+    else if (name === "Gallery")
+        return 2
+    else if (name ==="Music")
+        return 1
 }
-
 
 function getImgPath(name){
     if (name === "Setting")
